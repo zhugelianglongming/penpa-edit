@@ -139,8 +139,8 @@
         <div id="tool-container">
             <div id="tool-holder">
                 <div id="top_button">
-                    <button id="newboard">New Grid / Update</button>
-                    <button id="rotation">Transform</button>
+                    <button id="newboard">盘面</button>
+                    <button id="rotation">变换</button>
                     <button id="newsize" style="display:none;">Resize</button>
                     <button id="saveimage">Screenshot</button>
                     <button id="savetext">Share</button>
@@ -535,7 +535,7 @@
                     </div>
                     <div id="stylemode_button">
                         <span>
-                            <label class="label_mode tooltip" id="style_txt">Style:<span id="style_text" class="tooltiptext">Choose one style</span></label>
+                            <label class="label_mode tooltip" id="style_txt">文字样式:<span id="style_text" class="tooltiptext">Choose one style</span></label>
                         </span>
                         <span id="style_surface" style="display:'inline-block';">
                             <!-- Adding superscript was affecting the color selection as it did not had id, so defined new id and followed same structure as parent. Its important to have only two characters at the end after _ because of the way, window_click is setup in main.js for stylemode_check-->
@@ -682,17 +682,17 @@
                         </span>
                         <span id="style_sudoku" style="display:none;">
                             <input type="radio" name="style_sudoku" value="1" id="st_sudoku1" checked="checked">
-                            <label for="st_sudoku1" class="labelL" id="st_sudoku1_lb">B</label>
+                            <label for="st_sudoku1" class="labelL" id="st_sudoku1_lb">黑</label>
                             <input type="radio" name="style_sudoku" value="2" id="st_sudoku2">
-                            <label for="st_sudoku2" class="labelL" id="st_sudoku2_lb">G</label>
+                            <label for="st_sudoku2" class="labelL" id="st_sudoku2_lb">绿</label>
                             <input type="radio" name="style_sudoku" value="8" id="st_sudoku8">
-                            <label for="st_sudoku8" class="labelL" id="st_sudoku8_lb">B</label>
+                            <label for="st_sudoku8" class="labelL" id="st_sudoku8_lb">青</label>
                             <input type="radio" name="style_sudoku" value="3" id="st_sudoku3">
-                            <label for="st_sudoku3" class="labelL" id="st_sudoku3_lb">G</label>
+                            <label for="st_sudoku3" class="labelL" id="st_sudoku3_lb">灰</label>
                             <input type="radio" name="style_sudoku" value="9" id="st_sudoku9">
-                            <label for="st_sudoku9" class="labelL" id="st_sudoku9_lb">B</label>
+                            <label for="st_sudoku9" class="labelL" id="st_sudoku9_lb">蓝</label>
                             <input type="radio" name="style_sudoku" value="10" id="st_sudoku10">
-                            <label for="st_sudoku10" class="labelL" id="st_sudoku10_lb">R</label>
+                            <label for="st_sudoku10" class="labelL" id="st_sudoku10_lb">红</label>
                         </span>
                         <span id="style_special" style="display:none;">
                             <input type="text" name="style_special" id="colorpicker_special" />
@@ -790,16 +790,16 @@
     </div>
     <div id="modal" class="modal">
         <div id="modal-new-content" class="modal-content">
-            <h3 class="modal-header">New Grid</h3>
+            <h3 class="modal-header">盘面设置</h3>
             <span id="modal-grid">
-                <h4><label class="label_nb" id="nb_gridtype_lb">Board type:</label></h4>
+                <h4><label class="label_nb" id="nb_gridtype_lb">盘面类型:</label></h4>
                 <select id="gridtype" onchange="changetype()">
-                    <option value="square" id="nb_gridtype1_lb" selected="selected">Square</option>
+                    <option value="square" id="nb_gridtype1_lb" selected="selected">正方形</option>
                     <option value="hex" id="nb_gridtype2_lb">Hexagon</option>
                     <option value="tri" id="nb_gridtype3_lb">Triangle</option>
                     <option value="pyramid" id="nb_gridtype4_lb">Pyramid</option>
                     <option value="iso" id="nb_gridtype5_lb">Cube</option>
-                    <option value="sudoku" id="nb_gridtype6_lb">Sudoku</option>
+                    <option value="sudoku" id="nb_gridtype6_lb">数独</option>
                     <option value="kakuro" id="nb_gridtype7_lb">Kakuro</option>
                     <option value="tetrakis_square" id="nb_gridtype8_lb"> Tetrakis square </option>
                     <option value="truncated_square" id="nb_gridtype9_lb"> Truncated square </option>
@@ -809,20 +809,20 @@
                     <option value="deltoidal_trihexagonal" id="nb_gridtype13_lb"> Deltoidal trihexagonal </option>
                 </select>
             </span><br>
-            <h4><label class="label_nb" id="nb_size_lb">Size:</label></h4>
+            <h4><label class="label_nb" id="nb_size_lb">尺寸:</label></h4>
             <span>
-                <span><label class="label_nb" id="name_size2">Rows:</label></span>
+                <span><label class="label_nb" id="name_size2">总行数:</label></span>
                 <input type="number" pattern="\d*" name="nb_size2" id="nb_size2" value="10" min="1" max="100" step="1">
-                <span><label class="label_nb" id="name_size1">Columns:</label></span>
+                <span><label class="label_nb" id="name_size1">总列数:</label></span>
                 <input type="number" pattern="\d*" name="nb_size1" id="nb_size1" value="10" min="1" max="100" step="1">
-                <span><label class="label_nb" id="nb_sudoku1_lb">Diagonal &#x27CD;</label></span>
+                <span><label class="label_nb" id="nb_sudoku1_lb">下对角线 &#x27CD;</label></span>
                 <input type="checkbox" name="nb_sudoku1" id="nb_sudoku1">
-                <span><label class="label_nb" id="nb_sudoku4_lb">Diagonal &#x27CB;</label></span>
+                <span><label class="label_nb" id="nb_sudoku4_lb">上对角线 &#x27CB;</label></span>
                 <input type="checkbox" name="nb_sudoku4" id="nb_sudoku4">
                 <br>
-                <span><label class="label_nb" id="nb_sudoku2_lb">Outside clues</label></span>
+                <span><label class="label_nb" id="nb_sudoku2_lb">四周外提示</label></span>
                 <input type="checkbox" name="nb_sudoku2" id="nb_sudoku2">
-                <span><label class="label_nb" id="nb_sudoku3_lb">Outside clues (top/left)</label></span>
+                <span><label class="label_nb" id="nb_sudoku3_lb">左上外提示</label></span>
                 <input type="checkbox" name="nb_sudoku3" id="nb_sudoku3">
                 <br>
                 <span><label class="label_nb" id="nb_sudoku8_lb">Size 4x4</label></span>
@@ -835,55 +835,55 @@
                 <span><label class="label_nb" id="nb_sudoku7_lb"></label></span>
             </span>
             <br>
-            <h4><label class="label_nb" id="nb_space_lb">White space:</label></h4>
+            <h4><label class="label_nb" id="nb_space_lb">空白区域:</label></h4>
             <!--Mode Setting-->
+            <br>
             <span id="modal-spaceud" style="display:inline;">
-                <span><label class="label_nb" id="name_space1">Over:</label></span>
+                <span><label class="label_nb" id="name_space1">上:</label></span>
                 <input type="number" pattern="\d*" name="nb_space1" id="nb_space1" value="0" min="0" max="20" step="1">
-                <span><label class="label_nb" id="name_space2">Under</label></span>
+                <span><label class="label_nb" id="name_space2">下:</label></span>
                 <input type="number" pattern="\d*" name="nb_space2" id="nb_space2" value="0" min="0" max="20" step="1">
             </span>
             <br>
-            <h4><label class="label_nb">　　　</label></h4>
             <span id="modal-spacelr" style="display:inline;">
-                <span><label class="label_nb" id="name_space3">Left:</label></span>
+                <span><label class="label_nb" id="name_space3">左:</label></span>
                 <input type="number" pattern="\d*" name="nb_space3" id="nb_space3" value="0" min="0" max="20" step="1">
-                <span><label class="label_nb" id="name_space4">Right:</label></span>
+                <span><label class="label_nb" id="name_space4">右:</label></span>
                 <input type="number" pattern="\d*" name="nb_space4" id="nb_space4" value="0" min="0" max="20" step="1">
             </span>
             <br>
             <hr size=1 noshade class="newgridhrline">
-            <h5><label id="nb_note">*Update display* button only affects the following properties:</label></h5>
+            <h5><label id="nb_note">【更新样式】按钮仅对以下属性有效:</label></h5>
             <br>
-            <h4><label class="label_nb">Display size:</label></h4>
+            <h4><label class="label_nb">渲染大小:</label></h4>
             <span id="">
                 <input type="number" pattern="\d*" name="nb_size3" id="nb_size3" value="38" min="12" max="90" step="2">
             </span>
             <br>
-            <h4><label class="label_nb" id="nb_grid_lb">Gridlines:</label></h4>
+            <h4><label class="label_nb" id="nb_grid_lb">网格线:</label></h4>
             <input type="radio" name="nb_grid" value="1" id="nb_grid1" checked="checked">
-            <label for="nb_grid1" class="label" id="nb_grid1_lb">Solid line</label>
+            <label for="nb_grid1" class="label" id="nb_grid1_lb">实线</label>
             <input type="radio" name="nb_grid" value="2" id="nb_grid2">
-            <label for="nb_grid2" class="label" id="nb_grid2_lb">Dotted line</label>
+            <label for="nb_grid2" class="label" id="nb_grid2_lb">虚线</label>
             <input type="radio" name="nb_grid" value="3" id="nb_grid3">
-            <label for="nb_grid3" class="label" id="nb_grid3_lb">None</label>
+            <label for="nb_grid3" class="label" id="nb_grid3_lb">无</label>
             <br>
-            <h4><label class="label_nb" id="nb_lat_lb">Gridpoints:</label></h4>
+            <h4><label class="label_nb" id="nb_lat_lb">网格点:</label></h4>
             <input type="radio" name="nb_lat" value="1" id="nb_lat1">
-            <label for="nb_lat1" class="label" id="nb_lat1_lb">Yes</label>
+            <label for="nb_lat1" class="label" id="nb_lat1_lb">显示</label>
             <input type="radio" name="nb_lat" value="2" id="nb_lat2" checked="checked">
-            <label for="nb_lat2" class="label" id="nb_lat2_lb">No</label>
+            <label for="nb_lat2" class="label" id="nb_lat2_lb">隐藏</label>
             <br>
-            <h4><label class="label_nb" id="nb_out_lb">Outside frame:</label></h4>
+            <h4><label class="label_nb" id="nb_out_lb">边界线:</label></h4>
             <input type="radio" name="nb_out" value="1" id="nb_out1" checked="checked">
-            <label for="nb_out1" class="label" id="nb_out1_lb">Yes</label>
+            <label for="nb_out1" class="label" id="nb_out1_lb">显示</label>
             <input type="radio" name="nb_out" value="2" id="nb_out2">
-            <label for="nb_out2" class="label" id="nb_out2_lb">No</label>
+            <label for="nb_out2" class="label" id="nb_out2_lb">隐藏</label>
             <br><br>
             <div class="nb_button">
-                <input type="button" id="closeBtn_nb1" value="New grid" />
-                <input type="button" id="closeBtn_nb2" value="Update display" />
-                <input type="button" id="closeBtn_nb3" value="Close" />
+                <input type="button" id="closeBtn_nb1" value="新建盘面" />
+                <input type="button" id="closeBtn_nb2" value="更新样式" />
+                <input type="button" id="closeBtn_nb3" value="关闭" />
             </div>
         </div>
     </div>
@@ -891,7 +891,7 @@
         <div id="modal-newsize-content" class="modal-content">
             <h3 class="modal-header" id="modal-newsize_lb">Resize</h3>
             <span id="modal-sizeA">
-                <span><label class="label_nb" id="modal-newsize_size_lb">Display size:</label></span>
+                <span><label class="label_nb" id="modal-newsize_size_lb">渲染大小:</label></span>
                 <input type="number" pattern="\d*" name="nb_size3_r" id="nb_size3_r" value="38" min="12" max="90" step="2">
             </span>
             <br>
@@ -953,31 +953,31 @@
     </div>
     <div id="modal-rotate" class="modal">
         <div id="modal-rotate-content" class="modal-content">
-            <h3 class="modal-header" id="savetexttitle">Rotate / Move / Add / Remove</h3>
+            <h3 class="modal-header" id="savetexttitle">修改盘面</h3>
             <div class="nb_button">
-                <h4><label id="rt1_lb">Rotate:</label></h4>
+                <h4><label id="rt1_lb">旋转:</label></h4>
                 <input type="button" id="rt_left" value="&larr;" />
                 <input type="button" id="rt_right" value="&rarr;" />
             </div>
             <div class="nb_button">
-                <h4><label id="rt2_lb">Flip:</label></h4>
+                <h4><label id="rt2_lb">翻转:</label></h4>
                 <input type="button" id="rt_LR" value="&harr;" />
                 <input type="button" id="rt_UD" value="&#8597;" />
             </div>
             <br>
             <div class="nb_button">
-                <h4><label id="rt3_lb">Move:</label></h4>
+                <h4><label id="rt3_lb">移动:</label></h4>
                 <br>
-                <input type="button" id="rt_center" value="Move board to center" /><br>
+                <input type="button" id="rt_center" value="中心化" /><br>
                 <input type="button" id="rt_size" value="适应窗口" /><br>
-                <input type="button" id="rt_reset" value="Reset" />
+                <input type="button" id="rt_reset" value="重置" />
             </div>
             <br>
             <div class="nb_button">
-                <h4><label id="rt4_lb">Add/Remove Rows/Columns:</label></h4>
-                <p><label id="rt5_lb">*Works only in Square Board Type, it also resets undo/redo. Ensure empty row/column before removing.</label></p>
+                <h4><label id="rt4_lb">增删行列:</label></h4>
+                <p><label id="rt5_lb">*仅正方形盘面有效，清除操作记录，谨慎操作.</label></p>
                 <div class="resize-grid-buttons">
-                    <div class="existing-grid">Existing Grid</div>
+                    <div class="existing-grid">已有盘面</div>
                     <button class="addtop" id="rt_addtop">+ &#9650;</button>
                     <button class="subtop" id="rt_subtop">&ndash; &#9660;</button>
                     <button class="addleft" id="rt_addleft">+ &#9664;</button>
@@ -990,7 +990,7 @@
             </div>
             <br>
             <div class="nb_button">
-                <input type="button" id="closeBtn_rotate1" value="Close" />
+                <input type="button" id="closeBtn_rotate1" value="关闭" />
             </div>
         </div>
     </div>

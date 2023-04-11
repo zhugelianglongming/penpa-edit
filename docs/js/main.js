@@ -190,7 +190,7 @@ onload = function() {
         "Edge Normal", "Edge Diagonal", "Edge Free", "Edge Helper", "Edge Erase",
         "Wall",
         "Number Normal", "Number L", "Number M", "Number S", "Candidates", "Number 1/4", "Number Side",
-        "Sudoku Normal", "Sudoku Corner", "Sudoku Centre",
+        "数独>确认数", "数独>边角候选", "数独>中心候选",
         "Shape",
         "Special", "Thermo", "Sudoku Arrow",
         "Composite"

@@ -240,7 +240,7 @@ const UserSettings = {
         return this._gridtype;
     },
 
-    _tab_settings: [],
+    _tab_settings: ["Sudoku Normal", "Sudoku Centre"],
     set tab_settings(newValue) {
         newValue = newValue || [];
         this._tab_settings = newValue;

@@ -240,7 +240,7 @@ function make_class(gridtype, loadtype = 'new') {
                 document.getElementById(i).style.display = "none";
             }
             document.getElementById("nb_sudoku3_lb").style.display = "inline";
-            document.getElementById("nb_sudoku3_lb").innerHTML = "*White space is subtracted from the row/column size";
+            document.getElementById("nb_sudoku3_lb").innerHTML = "（包含空白区域）";
             if (nx <= gridmax['square'] && nx > 0 && ny <= gridmax['square'] && ny > 0 && space1 + space2 < ny && space3 + space4 < nx) {
                 pu = new Puzzle_square(nx, ny, size);
             } else {
@@ -600,10 +600,10 @@ function changetype() {
             for (var i of type4) {
                 document.getElementById(i).style.display = "none";
             }
-            document.getElementById("name_size1").innerHTML = "Columns：";
+            document.getElementById("name_size1").innerHTML = "总列数：";
             document.getElementById("name_space1").innerHTML = "Over：";
             document.getElementById("nb_sudoku3_lb").style.display = "inline";
-            document.getElementById("nb_sudoku3_lb").innerHTML = "*White space is subtracted from the row/column size";
+            document.getElementById("nb_sudoku3_lb").innerHTML = "（包含空白区域）";
             document.getElementById("nb_size1").value = 10;
             document.getElementById("nb_size2").value = 10;
             document.getElementById("nb_size3").value = 38;
@@ -706,8 +706,8 @@ function changetype() {
             for (var i of type4) {
                 document.getElementById(i).style.display = "inline";
             }
-            document.getElementById("nb_sudoku3_lb").innerHTML = "Outside clues (top/left)";
-            document.getElementById("nb_sudoku7_lb").innerHTML = "*Default size is 9x9";
+            document.getElementById("nb_sudoku3_lb").innerHTML = "左上外提示";
+            document.getElementById("nb_sudoku7_lb").innerHTML = "*默认尺寸是 9x9";
             document.getElementById("nb_sudoku1").checked = false;
             document.getElementById("nb_sudoku2").checked = false;
             document.getElementById("nb_sudoku3").checked = false;
@@ -864,13 +864,13 @@ function rotation() {
 
 function CreateCheck() {
     Swal.fire({
-        title: 'Are you sure want to reset the current board? To only change display size and grid lines use "Update display" button',
+        title: '是否确认重置盘面? 如仅需更新样式，可点击【更新样式】',
         html: '<h4 class="warn">You won\'t be able to revert this!</h4>',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: Color.BLUE_SKY,
         cancelButtonColor: Color.RED,
-        confirmButtonText: 'Yes, Reset it!'
+        confirmButtonText: '重置盘面'
     }).then((result) => {
         if (result.isConfirmed) {
             // Save grid size setting
