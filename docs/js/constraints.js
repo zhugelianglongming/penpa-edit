@@ -1,23 +1,23 @@
 const penpa_constraints = {
-    "options_groups": ["general", "sudoku", "puzzle"],
+    "options_groups": ["通用", "数独", "谜题"],
     "options": {
-        "general": ["all"],
-        "sudoku": [
+        "通用": ["all"],
+        "数独": [
             "classic",
-            "odd even",
+            "奇偶",
             "arrow",
             "thermo",
-            "little killer",
+            "小杀手",
             "killer",
             "difference",
             "kropki",
-            "palindrome",
-            "sandwich",
+            "回文",
+            "三明治",
             "quadruple",
-            "xv",
-            "between line"
+            "VX",
+            "之间线"
         ],
-        "puzzle": [
+        "谜题": [
             "slitherlink",
             "tapa",
             // "star battle",
@@ -35,7 +35,7 @@ const penpa_constraints = {
             // "yajilin"
         ]
     },
-    "border": ["difference", "kropki", "quadruple", "xv"], // puzzle types that involves placing clues on edges and corners
+    "border": ["difference", "kropki", "quadruple", "VX"], // puzzle types that involves placing clues on edges and corners
     "setting": {
         "all": {
             "modeset": ["surface", "line", "lineE", "wall", "cage", "number", "symbol", "special", "combi", "sudoku"],
@@ -51,7 +51,7 @@ const penpa_constraints = {
             "submodeset": ["1"],
             "styleset": [""]
         },
-        "odd even": {
+        "奇偶": {
             "show": ["mo_surface_lb",
                 "mo_sudoku_lb", "sub_sudoku1_lb", "sub_sudoku2_lb", "sub_sudoku3_lb",
                 "mo_symbol_lb", "ms1", "ms1_circle", "ms1_square", "li_circle_L", "li_square_L", "li_square", "li_circle"
@@ -79,7 +79,7 @@ const penpa_constraints = {
             "submodeset": ["1", "thermo"],
             "styleset": ["", ""]
         },
-        "little killer": {
+        "小杀手": {
             "show": ["mo_surface_lb",
                 "mo_sudoku_lb", "sub_sudoku1_lb", "sub_sudoku2_lb", "sub_sudoku3_lb",
                 "mo_symbol_lb", "ms3", "li_arrow_eight"
@@ -116,7 +116,7 @@ const penpa_constraints = {
             "submodeset": ["1", "circle_SS"],
             "styleset": ["", ""]
         },
-        "palindrome": {
+        "回文": {
             "show": ["mo_surface_lb",
                 "mo_sudoku_lb", "sub_sudoku1_lb", "sub_sudoku2_lb", "sub_sudoku3_lb",
                 "mo_line_lb", "sub_line1_lb", "sub_line2_lb", "sub_line3_lb"
@@ -125,7 +125,7 @@ const penpa_constraints = {
             "submodeset": ["1", "2"],
             "styleset": ["", 5]
         },
-        "sandwich": {
+        "三明治": {
             "show": ["mo_surface_lb",
                 "mo_sudoku_lb", "sub_sudoku1_lb", "sub_sudoku2_lb", "sub_sudoku3_lb",
                 "mo_number_lb", "sub_number1_lb"
@@ -144,7 +144,7 @@ const penpa_constraints = {
             "submodeset": ["1", "5", "circle_M"],
             "styleset": ["", "", ""]
         },
-        "xv": {
+        "VX": {
             "show": ["mo_surface_lb",
                 "mo_sudoku_lb", "sub_sudoku1_lb", "sub_sudoku2_lb", "sub_sudoku3_lb",
                 "mo_number_lb", "sub_number5_lb",
@@ -153,7 +153,7 @@ const penpa_constraints = {
             "submodeset": ["1", "5"],
             "styleset": ["", 6]
         },
-        "between line": {
+        "之间线": {
             "show": ["mo_surface_lb",
                 "mo_sudoku_lb", "sub_sudoku1_lb", "sub_sudoku2_lb", "sub_sudoku3_lb",
                 "mo_symbol_lb", "ms1", "ms1_circle", "li_circle_L", "li_circle",

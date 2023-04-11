@@ -152,23 +152,23 @@
                 </div>
                 <div id="buttons">
                     <div id="edit_button" class="mode_button">
-                        <label class="label_mode" id="edit_txt">Edit:</label>
+                        <label class="label_mode" id="edit_txt">编辑模式:</label>
                         <input type="radio" name="mode_qa" id="pu_q" value=1 checked="checked" />
-                        <label for="pu_q" class="label" id="pu_q_label">Problem</label>
+                        <label for="pu_q" class="label" id="pu_q_label">出题</label>
                         <input type="radio" name="mode_qa" id="pu_a" value=2 />
-                        <label for="pu_a" class="label" id="pu_a_label">Solution</label>
-                        <label class="label_mode" id="constraints">Constraints (Beta):</label>
+                        <label for="pu_a" class="label" id="pu_a_label">解题</label>
+                        <label class="label_mode" id="constraints">主题:</label>
                         <select name="constraints_settings" id="constraints_settings_opt"> </select>
-                        <span id="visibility_button0" class="label_mode">Visibility:</span>
-                        <span id="visibility_button" class="label">ON</span>
+                        <span id="visibility_button0" class="label_mode">当前解在出题模式:</span>
+                        <span id="visibility_button" class="label">可见</span>
                         <br id="visibility_break">
-                        <span id="edge_button0" class="label_mode">Draw on Edges:</span>
-                        <span id="edge_button" class="label">OFF</span>
+                        <span id="edge_button0" class="label_mode">线上编辑:</span>
+                        <span id="edge_button" class="label">关闭</span>
                     </div>
                     <div id="mode_button" class="mode_button">
                         <label class="label_mode" id="mode_txt">Mode:</label>
                         <input type="radio" name="mode" id="mo_surface" checked="checked" />
-                        <label for="mo_surface" class="label" id="mo_surface_lb">Surface</label>
+                        <label for="mo_surface" class="label" id="mo_surface_lb">染色</label>
                         <input type="radio" name="mode" id="mo_line" />
                         <label for="mo_line" class="label" id="mo_line_lb">Line</label>
                         <input type="radio" name="mode" id="mo_lineE" />
@@ -186,7 +186,7 @@
                         <input type="radio" name="mode" id="mo_number" />
                         <label for="mo_number" class="label" id="mo_number_lb">Number</label>
                         <input type="radio" name="mode" id="mo_sudoku" />
-                        <label for="mo_sudoku" class="label" id="mo_sudoku_lb">Sudoku</label>
+                        <label for="mo_sudoku" class="label" id="mo_sudoku_lb">数独</label>
                         <input type="radio" name="mode" id="mo_symbol" />
                         <label for="mo_symbol" class="label" id="mo_symbol_lb">Shape</label>
                         <input type="radio" name="mode" id="mo_special" />
@@ -526,11 +526,11 @@
                         </span>
                         <span id="mode_sudoku" style="display:none;">
                             <input type="radio" name="mode_sudoku" value="1" id="sub_sudoku1" checked="checked">
-                            <label for="sub_sudoku1" class="labelSu" id="sub_sudoku1_lb">Normal</label>
+                            <label for="sub_sudoku1" class="labelSu" id="sub_sudoku1_lb">确认数</label>
                             <input type="radio" name="mode_sudoku" value="2" id="sub_sudoku2">
-                            <label for="sub_sudoku2" class="labelSu" id="sub_sudoku2_lb">Corner</label>
+                            <label for="sub_sudoku2" class="labelSu" id="sub_sudoku2_lb">边角候选</label>
                             <input type="radio" name="mode_sudoku" value="3" id="sub_sudoku3">
-                            <label for="sub_sudoku3" class="labelSu" id="sub_sudoku3_lb">Centre</label>
+                            <label for="sub_sudoku3" class="labelSu" id="sub_sudoku3_lb">中心候选</label>
                         </span>
                     </div>
                     <div id="stylemode_button">
@@ -969,7 +969,7 @@
                 <h4><label id="rt3_lb">Move:</label></h4>
                 <br>
                 <input type="button" id="rt_center" value="Move board to center" /><br>
-                <input type="button" id="rt_size" value="Fit window to board" /><br>
+                <input type="button" id="rt_size" value="适应窗口" /><br>
                 <input type="button" id="rt_reset" value="Reset" />
             </div>
             <br>

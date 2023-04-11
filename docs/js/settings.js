@@ -315,7 +315,7 @@ const UserSettings = {
     set draw_edges(newValue) {
         const button = document.getElementById("edge_button");
         this._draw_edges = newValue;
-        button.textContent = newValue ? "ON" : "OFF";
+        button.textContent = newValue ? "开启" : "关闭";
 
         if (window.pu) {
             if (!newValue) {
@@ -333,7 +333,7 @@ const UserSettings = {
     set show_solution(newValue) {
         const button = document.getElementById("visibility_button");
         this._show_solution = newValue;
-        button.textContent = newValue ? "ON" : "OFF";
+        button.textContent = newValue ? "可见" : "隐藏";
 
         if (window.pu) {
             pu.redraw();

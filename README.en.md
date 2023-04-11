@@ -1,5 +1,7 @@
 # penpa-editor
 
+[中文](README.zh-cn.md) | English
+
 Universal pencil puzzle editor capable of drawing many different kinds of pencil puzzles. You can also solve problems in the software.
 
 You can save images and text in the form of URLs that can be loaded in a browser.
