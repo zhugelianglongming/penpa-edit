@@ -21,7 +21,7 @@ const answercheck_opt_conversion = {
 }
 
 const answercheck_message = {
-    "shading": "Shade cells in Dark Grey (DG) or Grey (GR) or Light Grey (LG) or Black (BL)",
+    "shading": "将单元格染成：深灰、灰、浅灰、黑",
     "number": "Numbers must be in Green, Blue or Red color",
     "cell loop": "Line must be in Green Color",
     "edge loop": "Edge must be in Green Color",

@@ -2296,9 +2296,9 @@ class Puzzle {
 
         // If panel is ON, show Mode info on header
         if (document.getElementById('panel_button').value === "1") {
-            let modes_mapping = ['Surface', 'Line', 'Edge', 'Wall', 'Number', 'Shape', 'Special', 'Cage', 'Composite', 'Sudoku', 'Box', 'Move'];
+            let modes_mapping = ['染色', 'Line', 'Edge', 'Wall', 'Number', 'Shape', 'Special', 'Cage', 'Composite', '数独', 'Box', 'Move'];
             let mode_loc = penpa_modes["square"]["mode"].indexOf(mode);
-            document.getElementById('float-key-header-lb').innerHTML = "Mode: " + modes_mapping[mode_loc];
+            document.getElementById('float-key-header-lb').innerHTML = "模式: " + modes_mapping[mode_loc];
         }
         if (mode === "number") {
             // Update cursolS after mode switch, because it is not set in all modes.
@@ -3282,6 +3282,13 @@ class Puzzle {
         let checkall = this.checkall_status();
         let settingstatus_or = document.getElementById("answersetting").getElementsByClassName("solcheck_or");
 
+        // define color
+        let color_dark_grey = 1;
+        let color_light_grep = 3;
+        let color_black = 4;
+        let color_grey = 8;
+        let target_colors = new Set([color_dark_grey, color_light_grep, color_black, color_grey]);
+
         if (!this.multisolution) {
             // 0 - shading
             // 1 - Line / FreeLine
@@ -3303,11 +3310,10 @@ class Puzzle {
             if (document.getElementById("sol_surface").checked === true || checkall) {
                 for (var i in this[pu].surface) {
                     let pu_q = "pu_q";
-                    if (this[pu_q].surface[i] && (this[pu_q].surface[i] === 1 || this[pu_q].surface[i] === 8 || this[pu_q].surface[i] === 3 || this[pu_q].surface[i] === 4)) {
+                    if (this[pu_q].surface[i] && target_colors.has(this[pu_q].surface[i])) {
                         // ignore the shading if already in problem mode
                     } else {
-                        // 1 is DG, 8 is GR, 3 is LG, 4 is BL
-                        if (this[pu].surface[i] === 1 || this[pu].surface[i] === 8 || this[pu].surface[i] === 3 || this[pu].surface[i] === 4) {
+                        if (target_colors.has(this[pu].surface[i])) {
                             sol[0].push(i);
                         }
                     }
@@ -3657,8 +3663,7 @@ class Puzzle {
                                 if (this["pu_q"].surface[i]) {
                                     // ignore the shading if already in problem mode
                                 } else {
-                                    // 1 is DG, 8 is GR, 3 is LG, 4 is BL
-                                    if (this[pu].surface[i] === 1 || this[pu].surface[i] === 8 || this[pu].surface[i] === 3 || this[pu].surface[i] === 4) {
+                                    if (target_colors.has(this[pu].surface[i])) {
                                         temp_sol.push(i);
                                     }
                                 }
