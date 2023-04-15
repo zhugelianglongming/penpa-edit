@@ -1913,8 +1913,86 @@ function load_feedback() {
 
 function show_shortcuts() {
     Swal.fire({
-        title: 'Shortcuts',
-        html: '<table style="width:100%" class="shortcuts"><tr><th style="color:Green;" colspan="2">General</th></tr><tr><th style="color:red;">F2</th><th>Problem mode</th></tr><tr><th style="color:red;">F3</th><th>Solution mode</th></tr><tr><th style="color:red;">F4</th><th>Hide/Show Timer</th></tr><tr><th style="color:red;">Ctrl + D</th><th>Clone/Duplicate</th></tr><tr><th style="color:Green;" colspan="2">Sudoku Mode</th></tr><tr><th style="color:red;">Z</th><th>Normal Submode</th></tr><tr><th style="color:red;">X</th><th>Corner Submode</th></tr><tr><th style="color:red;">C</th><th>Centre Submode</th></tr><tr><th style="color:red;">V</th><th>Shading (Surface Mode)</th></tr><tr><th style="color:red;">SHIFT</th><th>For Temporary Corner Submode</th></tr><tr><th style="color:red;">SHIFT + DEL</th><th>Deletes only corner pencil marks from the selected cells</th></tr><tr><th style="color:red;">CTRL</th><th>For Temporary Centre Submode</th></tr><tr><th style="color:red;">CTRL + DEL</th><th>Deletes only centre pencil marks from the selected cells</th></tr><tr><th style="color:red;">Border: ON</th><th>will allow you to write digits on the edges</th></tr><tr><th style="color:Green;" colspan="2">Surface Mode</th></tr><tr><th colspan="2">Use number keys to switch between styles</th></tr> </table>',
+        title: '快捷键',
+        html: '<table style="width:100%" class="shortcuts">' +
+            '<tr>' +
+                '<th style="color:Green;" colspan="2">通用</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">F2</th>' +
+                '<th>出题</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">F3</th>' +
+                '<th>解题</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">F4</th>' +
+                '<th>显示/隐藏计时器</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">Ctrl + D</th>' +
+                '<th>创建副本</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">Tab/Enter</th>' +
+                '<th>在自定义功能/模式间切换</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:Green;" colspan="2">数独模式</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">Z</th>' +
+                '<th>切换到数独模式>确认数&emsp;</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">X</th>' +
+                '<th>切换到数独模式>边角候选</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">C</th>' +
+                '<th>切换到数独模式>中心候选</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">V</th>' +
+                '<th>切换到染色模式</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">Shift + 候选</th>' +
+                '<th>以边角候选填入候选（临时）</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">Shift + Del</th>' +
+                '<th>删除边角候选</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">Ctrl + 候选</th>' +
+                '<th>以中心候选填入候选（临时）</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">Ctrl + Del</th>' +
+                '<th>删除中心候选</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:Green;" colspan="2">染色模式</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">数字</th>' +
+                '<th colspan="2">变更颜色</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">Z</th>' +
+                '<th>切换到数独模式>确认数&emsp;</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">X</th>' +
+                '<th>切换到数独模式>边角候选</th>' +
+            '</tr>' +
+            '<tr>' +
+                '<th style="color:red;">C</th>' +
+                '<th>切换到数独模式>中心候选</th>' +
+            '</tr>' +
+            '</table>',
     })
 }
 

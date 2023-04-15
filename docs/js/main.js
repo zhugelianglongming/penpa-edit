@@ -185,7 +185,7 @@ onload = function() {
         "Composite"
     ];
 
-    let modes_text = ["Surface",
+    let modes_text = ["染色",
         "Line Normal", "Line Diagonal", "Line Free", "Line Middle", "Line Helper",
         "Edge Normal", "Edge Diagonal", "Edge Free", "Edge Helper", "Edge Erase",
         "Wall",
