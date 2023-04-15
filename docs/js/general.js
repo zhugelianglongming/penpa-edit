@@ -1912,87 +1912,36 @@ function load_feedback() {
 }
 
 function show_shortcuts() {
+    var data = {
+        shortcuts: {
+            "通用": {
+                "F2": "出题",
+                "F3": "解题",
+                "F4": "显示/隐藏计时器",
+                "Ctrl + D": "创建副本",
+                "Tab/Enter": "在自定义功能/模式间切换",
+            },
+            "数独模式": {
+                "Z": "切换到数独模式>确认数&emsp;",
+                "X": "切换到数独模式>边角候选",
+                "C": "切换到数独模式>中心候选",
+                "V": "切换到染色模式",
+                "Shift + 候选": "以边角候选填入候选（临时）",
+                "Shift + Del": "删除边角候选",
+                "Ctrl + 候选": "以中心候选填入候选（临时）",
+                "Ctrl + Del": "删除中心候选",
+            },
+            "染色模式": {
+                "数字": "变更颜色",
+                "Z": "切换到数独模式>确认数&emsp;",
+                "X": "切换到数独模式>边角候选",
+                "C": "切换到数独模式>中心候选",
+            }
+        },
+    };
     Swal.fire({
         title: '快捷键',
-        html: '<table style="width:100%" class="shortcuts">' +
-            '<tr>' +
-                '<th style="color:Green;" colspan="2">通用</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">F2</th>' +
-                '<th>出题</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">F3</th>' +
-                '<th>解题</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">F4</th>' +
-                '<th>显示/隐藏计时器</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">Ctrl + D</th>' +
-                '<th>创建副本</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">Tab/Enter</th>' +
-                '<th>在自定义功能/模式间切换</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:Green;" colspan="2">数独模式</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">Z</th>' +
-                '<th>切换到数独模式>确认数&emsp;</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">X</th>' +
-                '<th>切换到数独模式>边角候选</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">C</th>' +
-                '<th>切换到数独模式>中心候选</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">V</th>' +
-                '<th>切换到染色模式</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">Shift + 候选</th>' +
-                '<th>以边角候选填入候选（临时）</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">Shift + Del</th>' +
-                '<th>删除边角候选</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">Ctrl + 候选</th>' +
-                '<th>以中心候选填入候选（临时）</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">Ctrl + Del</th>' +
-                '<th>删除中心候选</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:Green;" colspan="2">染色模式</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">数字</th>' +
-                '<th colspan="2">变更颜色</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">Z</th>' +
-                '<th>切换到数独模式>确认数&emsp;</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">X</th>' +
-                '<th>切换到数独模式>边角候选</th>' +
-            '</tr>' +
-            '<tr>' +
-                '<th style="color:red;">C</th>' +
-                '<th>切换到数独模式>中心候选</th>' +
-            '</tr>' +
-            '</table>',
+        html: template('shortcut_template', data),
     })
 }
 

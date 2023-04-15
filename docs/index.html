@@ -4,6 +4,22 @@
 <head>
     <!-- HTML Meta Tags -->
     <title>Penpa+</title>
+    <script src="js/libs/template-web.js"></script>
+    <script id="shortcut_template" type="text/html">
+        <table style="width:100%" class="shortcuts">
+            {{each shortcuts _ mode}}
+            <tr>
+                <th style="color:Green;" colspan="2">{{mode}}</th>
+            </tr>
+            {{each shortcuts[mode] func key}}
+            <tr>
+                <th style="color:red;">{{key}}</th>
+                <th>{{func}}</th>
+            </tr>
+            {{/each}}
+            {{/each}}
+        </table>
+    </script>
     <meta name="description" content="Web application to create and solve Sudokus and Puzzles.">
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://swaroopg92.github.io/penpa-edit/">
