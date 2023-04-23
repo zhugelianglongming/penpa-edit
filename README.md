@@ -63,29 +63,29 @@
   and click the board. Erase with two clicks.
 * Some symbols such as symbol> figure> cross are onoff input formats. Click the panel to enter directly. Special
   example: Digital (frame) with the same key. If you press it twice, only the frame will be displayed.
-* 特殊模式:
-  * 删除：单击图形的首个单元格
-* Special: The tip position can be returned to the front by returning to the path that was used during input.
+* 图标模式:
+  * 删除图形：单击图形的首个单元格
+  * 支持类型，包括但不限于：
+    * 数独
+      * 标准
+      * 奇偶
+      * 箭头
+      * 温度计
+      * 小杀手
+      * 杀手
+      * difference
+      * 黑白点
+      * 回文
+      * 三明治
+      * quadruple
+      * VX
+      * 之间线
+    * 谜题
+      * slither link
+      * tapa
+  * The tip position can be returned to the front by returning to the path that was used during input.
 * 解答内容可见开关: Visibility Button.
 * 线上编辑开关: Draw on Edges.
-* 特殊限制:
-  * 数独
-    * 标准
-    * 奇偶
-    * 箭头
-    * 温度计
-    * 小杀手
-    * 杀手
-    * difference
-    * 黑白点
-    * 回文
-    * 三明治
-    * quadruple
-    * VX
-    * 之间线
-  * 谜题
-    * slither link
-    * tapa
 
 ## 盘面类型
 
@@ -214,12 +214,13 @@
 * Depending on the style, you can select whether to place the figure on the front side or the back side of the line.
 * When the BORDER input is turned ON, the character is placed on the side/vertex.
 
-### Special
+### 图标模式
 
-* A special symbol that spans multiple squares. (Arrow Sudoku, Thermo Sudoku, moving arrows, square area)
-* Click the first cell you entered to erase it.
-* Polygon: The vertices are selected in the order in which they are clicked. Click the last clicked vertex or the first
-  clicked vertex again to end selection.
+* 允许标记跨越多格的特殊图形标记（温度计、箭头、方块区域、多边形）
+* 删除图形标记：单击图形中您输入的第一个单元格
+* 绘制多边形：
+  * 按顺序单击选择顶点
+  * 单机选择过的顶点以结束选择
 
 ### Cage
 
@@ -442,19 +443,19 @@
 1. This allows user to generate a text file output that follows the submission formatting rules for
    GMPuzzles (https://tinyurl.com/GMPuzzlesFormatting).
 2. It currently supports (this list is frequently updated):
-  * Sudoku
-    * classicsudoku (cs)
-    * thermosudoku (ts)
-      * Special -> Thermo
-    * arrowsudoku (as)
-      * Special -> Sudoku Arrow
-    * evenoddsudoku (eos)
+  * 数独
+    * 标准数独 (cs)
+    * 温度计数独 (ts)
+      * 图标模式 -> 温度计
+    * 箭头数独 (as)
+      * 图标模式 -> 带尾箭
+    * 奇偶数独 (eos)
       * [Panel: ON] Use Shape mode -> Shape/Circle submode (1st option in the dropdown) and Shape/Square submode (2nd
         option in the dropdown)
-    * consecutivepairssudoku (cps)
+    * 连续数独 (cps)
       * [Panel: ON] Use Shape mode -> Shape/Circle submode -> XS size (1st option in the dropdown). Set BORDER: ON to
         put circles on edges.
-    * tightfitsudoku (tfs)
+    * TightFitSudoku (tfs)
       * (Panel: ON) For Slash/Split: Use Shape Mode -> Shape Submode -> "〇△◻x" from dropdown list -> 6th Shape in the
         Panel
       * For numbers: Use "Corner" submode (6th option) to enter in top left or bottom right corner of the split cell,
