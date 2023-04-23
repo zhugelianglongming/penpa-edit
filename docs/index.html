@@ -209,9 +209,9 @@
                         <input type="radio" name="mode" id="mo_sudoku" />
                         <label for="mo_sudoku" class="label" id="mo_sudoku_lb">数独</label>
                         <input type="radio" name="mode" id="mo_symbol" />
-                        <label for="mo_symbol" class="label" id="mo_symbol_lb">Shape</label>
+                        <label for="mo_symbol" class="label" id="mo_symbol_lb">图标</label>
                         <input type="radio" name="mode" id="mo_special" />
-                        <label for="mo_special" class="label" id="mo_special_lb">图标</label>
+                        <label for="mo_special" class="label" id="mo_special_lb">多格图标</label>
                         <input type="radio" name="mode" id="mo_combi" />
                         <label for="mo_combi" class="label" id="mo_combi_lb">Composite</label>
                         <span class="tab" id="tab_selection">
@@ -274,7 +274,71 @@
                         </span>
                         <span id="mode_symbol" style="display:none;">
                             <ul class="nav">
-                                <li><span id="ms1" class="labelS">Shape</span>
+                                <li><span id="ms2" class="labelS">数学</span>
+                                    <ul id="mode_symbolul2">
+                                        <li><span id="ms3_math">数学符号</span>
+                                            <ul>
+                                                <li><span id="ms_math">黑色</span></li>
+                                                <li><span id="ms_math_G">绿色</span></li>
+                                            </ul>
+                                        </li>
+                                        <li><span id="ms_inequality">&#xFF1C; &#xFF1E; ^ v </span></li>
+                                        <li id=msli_degital><span id="ms1_degital">&brvbar;-&brvbar; &brvbar; '-&brvbar;</span>
+                                            <ul id="ul_degital">
+                                                <li><span id="ms_degital_B">黑色</span></li>
+                                                <li><span id="ms_degital_E">绿色</span></li>
+                                                <li><span id="ms_degital_G">灰色</span></li>
+                                            </ul>
+                                        </li>
+                                        <li><span id="ms_degital_f">数码管</span></li>
+                                        <li><span id="ms_dice">色子</span></li>
+                                        <li><span id="ms_pills">Pills</span></li>
+                                    </ul>
+                                </li>
+                                <li><span id="ms3" class="labelS">箭头</span>
+                                    <ul id="mode_symbolul3">
+                                        <li id="li_arrow_B"><span id="ms3_arrow_B">长宽</span>
+                                            <ul>
+                                                <li><span id="ms_arrow_B_B">黑色</span></li>
+                                                <li><span id="ms_arrow_B_G">灰色</span></li>
+                                                <li><span id="ms_arrow_B_W">白色</span></li>
+                                            </ul>
+                                        </li>
+                                        <li id="li_arrow_N"><span id="ms3_arrow_N">长窄</span>
+                                            <ul>
+                                                <li><span id="ms_arrow_N_B">黑色</span></li>
+                                                <li><span id="ms_arrow_N_G">灰色</span></li>
+                                                <li><span id="ms_arrow_N_W">白色</span></li>
+                                            </ul>
+                                        </li>
+                                        <li id="li_arrow_tri"><span id="ms3_arrow_tri">三角</span>
+                                            <ul>
+                                                <li><span id="ms_arrow_tri_B">黑色</span></li>
+                                                <li><span id="ms_arrow_tri_G">灰色</span></li>
+                                                <li><span id="ms_arrow_tri_W">白色</span></li>
+                                            </ul>
+                                        </li>
+                                        <li id="li_arrow_fouredge"><span id="ms3_arrow_fouredge">靠边</span>
+                                            <ul>
+                                                <li><span id="ms_arrow_fouredge_B">黑色</span></li>
+                                                <li><span id="ms_arrow_fouredge_G">灰色</span></li>
+                                                <li><span id="ms_arrow_fouredge_E">绿色</span></li>
+                                            </ul>
+                                        </li>
+                                        <li id="li_arrow_GP"><span id="ms3_arrow_GP">GP</span>
+                                            <ul>
+                                                <li><span id="ms_arrow_GP">普通</span></li>
+                                                <li><span id="ms_arrow_GP_C">带圈</span></li>
+                                            </ul>
+                                        </li>
+                                        <li id="li_arrow_Short"><span id="ms_arrow_Short">短宽</span></li>
+                                        <li id="li_arrow_S"><span id="ms_arrow_S">短窄</span></li>
+                                        <li id="li_arrow_cross"><span id="ms_arrow_cross">离心窄</span></li>
+                                        <li id="li_arrow_eight"><span id="ms_arrow_eight">离心宽</span></li>
+                                        <li id="li_arrow_fourtip"><span id="ms_arrow_fourtip">向心三角</span></li>
+                                    </ul>
+                                </li>
+                                <li><span id="ms1" class="labelS">基本</span>
                                     <ul id="mode_symbolul1">
                                         <li id="li_circle"><span id="ms1_circle">&#x26AB; &#x26AA; &#x25CF; &#x25CB;</span>
                                             <ul>
@@ -333,7 +397,7 @@
                                                 <li><span id="ms_diamond_SS">XS</span></li>
                                             </ul>
                                         </li>
-                                        <li id="li_hexpoint"><span id="ms1_hexpoint">Hexagon point</span>
+                                        <li id="li_hexpoint"><span id="ms1_hexpoint">六边形（竖）</span>
                                             <ul>
                                                 <li><span id="ms_hexpoint_LL">XL</span></li>
                                                 <li><span id="ms_hexpoint_L">L</span></li>
@@ -342,7 +406,7 @@
                                                 <li><span id="ms_hexpoint_SS">XS</span></li>
                                             </ul>
                                         </li>
-                                        <li id="li_hexflat"><span id="ms1_hexflat">Hexagon flat</span>
+                                        <li id="li_hexflat"><span id="ms1_hexflat">六边形（横）</span>
                                             <ul>
                                                 <li><span id="ms_hexflat_LL">XL</span></li>
                                                 <li><span id="ms_hexflat_L">L</span></li>
@@ -353,89 +417,25 @@
                                         </li>
                                         <li id="li_ox"><span id="ms1_ox">○△□×</span>
                                             <ul>
-                                                <li><span id="ms_ox_B">Black</span></li>
-                                                <li><span id="ms_ox_E">Green</span></li>
-                                                <li><span id="ms_ox_G">Gray</span></li>
+                                                <li><span id="ms_ox_B">黑色</span></li>
+                                                <li><span id="ms_ox_E">绿色</span></li>
+                                                <li><span id="ms_ox_G">灰色</span></li>
                                             </ul>
                                         </li>
-                                        <li id="li_cross"><span id="ms_cross">Cross</span></li>
-                                        <li id="li_line"><span id="ms_line">Lines</span></li>
-                                        <li id="li_frameline"><span id="ms_frameline">Cage Lines</span></li>
-                                        <li id="li_bars"><span id="ms1_bars">Bars &#x25AE; &#x25AF;</span>
+                                        <li id="li_cross"><span id="ms_cross">半径</span></li>
+                                        <li id="li_line"><span id="ms_line">实线</span></li>
+                                        <li id="li_frameline"><span id="ms_frameline">虚线</span></li>
+                                        <li id="li_bars"><span id="ms1_bars">粗线</span>
                                             <ul id="ul_bars">
-                                                <li><span id="ms_bars_B">Black</span></li>
-                                                <li><span id="ms_bars_G">Gray</span></li>
-                                                <li><span id="ms_bars_W">White</span></li>
+                                                <li><span id="ms_bars_B">黑色</span></li>
+                                                <li><span id="ms_bars_G">灰色</span></li>
+                                                <li><span id="ms_bars_W">白色</span></li>
                                             </ul>
                                         </li>
                                         <li id="li_tri"><span id="ms_tri">&#x25E2; &#x25E3; &#x25E4; &#x25E5;</span></li>
                                     </ul>
                                 </li>
-                                <li><span id="ms2" class="labelS">Number</span>
-                                    <ul id="mode_symbolul2">
-                                        <li><span id="ms3_math">Math</span>
-                                            <ul>
-                                                <li><span id="ms_math">Black</span></li>
-                                                <li><span id="ms_math_G">Green</span></li>
-                                            </ul>
-                                        </li>
-                                        <li><span id="ms_inequality">&#xFF1C; &#xFF1E; ^ v </span></li>
-                                        <li id=msli_degital><span id="ms1_degital">&brvbar;-&brvbar; &brvbar; '-&brvbar;</span>
-                                            <ul id="ul_degital">
-                                                <li><span id="ms_degital_B">Black</span></li>
-                                                <li><span id="ms_degital_E">Green</span></li>
-                                                <li><span id="ms_degital_G">Gray</span></li>
-                                            </ul>
-                                        </li>
-                                        <li><span id="ms_degital_f">Digital Frame</span></li>
-                                        <li><span id="ms_dice">⚀ ⚂ ⚅</span></li>
-                                        <li><span id="ms_pills">Pills</span></li>
-                                    </ul>
-                                </li>
-                                <li><span id="ms3" class="labelS">Arrow</span>
-                                    <ul id="mode_symbolul3">
-                                        <li id="li_arrow_B"><span id="ms3_arrow_B">Fat</span>
-                                            <ul>
-                                                <li><span id="ms_arrow_B_B">Black</span></li>
-                                                <li><span id="ms_arrow_B_G">Grey</span></li>
-                                                <li><span id="ms_arrow_B_W">White</span></li>
-                                            </ul>
-                                        </li>
-                                        <li id="li_arrow_N"><span id="ms3_arrow_N">Thin</span>
-                                            <ul>
-                                                <li><span id="ms_arrow_N_B">Black</span></li>
-                                                <li><span id="ms_arrow_N_G">Grey</span></li>
-                                                <li><span id="ms_arrow_N_W">White</span></li>
-                                            </ul>
-                                        </li>
-                                        <li id="li_arrow_tri"><span id="ms3_arrow_tri">Triangular</span>
-                                            <ul>
-                                                <li><span id="ms_arrow_tri_B">Black</span></li>
-                                                <li><span id="ms_arrow_tri_G">Grey</span></li>
-                                                <li><span id="ms_arrow_tri_W">White</span></li>
-                                            </ul>
-                                        </li>
-                                        <li id="li_arrow_fouredge"><span id="ms3_arrow_fouredge">Four edge</span>
-                                            <ul>
-                                                <li><span id="ms_arrow_fouredge_B">Black</span></li>
-                                                <li><span id="ms_arrow_fouredge_G">Grey</span></li>
-                                                <li><span id="ms_arrow_fouredge_E">Green</span></li>
-                                            </ul>
-                                        </li>
-                                        <li id="li_arrow_GP"><span id="ms3_arrow_GP">GP</span>
-                                            <ul>
-                                                <li><span id="ms_arrow_GP">Normal</span></li>
-                                                <li><span id="ms_arrow_GP_C">With circle</span></li>
-                                            </ul>
-                                        </li>
-                                        <li id="li_arrow_Short"><span id="ms_arrow_Short">Short and fat</span></li>
-                                        <li id="li_arrow_S"><span id="ms_arrow_S">Small</span></li>
-                                        <li id="li_arrow_cross"><span id="ms_arrow_cross">Cross</span></li>
-                                        <li id="li_arrow_eight"><span id="ms_arrow_eight">8-way</span></li>
-                                        <li id="li_arrow_fourtip"><span id="ms_arrow_fourtip">Arrow tips</span></li>
-                                    </ul>
-                                </li>
-                                <li><span id="ms4" class="labelS">Special 1</span>
+                                <li><span id="ms4" class="labelS">特殊 1</span>
                                     <ul id="mode_symbolul4">
                                         <li id="li_battleship"><span id="ms4_battleship">Battleship</span>
                                             <ul>
@@ -457,7 +457,7 @@
                                         <li id="li_polyhex"><span id="ms_polyhex">Polyhex</span></li>
                                     </ul>
                                 </li>
-                                <li><span id="ms5" class="labelS">Special 2</span>
+                                <li><span id="ms5" class="labelS">特殊 2</span>
                                     <ul id="mode_symbolul5">
                                         <li><span id="ms_angleloop">Angle Loop</span></li>
                                         <li><span id="ms_firefly">Firefly</span></li>
@@ -677,9 +677,9 @@
                         </span>
                         <span id="style_symbol" style="display:none;">
                             <input type="radio" name="style_symbol" value="1" id="st_symbol1">
-                            <label for="st_symbol1" class="label" id="st_symbol1_lb">Behind Lines</label>
+                            <label for="st_symbol1" class="label" id="st_symbol1_lb">线下</label>
                             <input type="radio" name="style_symbol" value="2" id="st_symbol2" checked="checked">
-                            <label for="st_symbol2" class="label" id="st_symbol2_lb">In front of lines</label>
+                            <label for="st_symbol2" class="label" id="st_symbol2_lb">线上</label>
                             <span class="symbolmode_display">
                                 <span id="panel_buttons0" class="label">Selection:</span>
                                 <b><span id="symmode_content" class="symmode_content">circle_L</span></b>

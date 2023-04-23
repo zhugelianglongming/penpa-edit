@@ -191,8 +191,8 @@ onload = function() {
         "Wall",
         "Number Normal", "Number L", "Number M", "Number S", "Candidates", "Number 1/4", "Number Side",
         "数独>确认数", "数独>边角候选", "数独>中心候选",
-        "Shape",
-        "Special", "Thermo", "Sudoku Arrow",
+        "图标",
+        "多格图标", "Thermo", "Sudoku Arrow",
         "Composite"
     ];
 

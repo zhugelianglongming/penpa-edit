@@ -2296,7 +2296,7 @@ class Puzzle {
 
         // If panel is ON, show Mode info on header
         if (document.getElementById('panel_button').value === "1") {
-            let modes_mapping = ['染色', 'Line', 'Edge', 'Wall', 'Number', 'Shape', 'Special', 'Cage', 'Composite', '数独', 'Box', 'Move'];
+            let modes_mapping = ['染色', 'Line', 'Edge', 'Wall', 'Number', '图标', 'Special', 'Cage', 'Composite', '数独', 'Box', 'Move'];
             let mode_loc = penpa_modes["square"]["mode"].indexOf(mode);
             document.getElementById('float-key-header-lb').innerHTML = "模式: " + modes_mapping[mode_loc];
         }

@@ -63,7 +63,7 @@
   and click the board. Erase with two clicks.
 * Some symbols such as symbol> figure> cross are onoff input formats. Click the panel to enter directly. Special
   example: Digital (frame) with the same key. If you press it twice, only the frame will be displayed.
-* 图标模式:
+* 多格图标模式:
   * 删除图形：单击图形的首个单元格
   * 支持类型，包括但不限于：
     * 数独
@@ -207,14 +207,17 @@
 * One can also type in the sentence of words and "Insert".
 * Clear button to clear the text area.
 
-### Shape
-
-* Numerous symbols. You can browse the symbols that can be entered by opening the panel. Figures such as 〇 and □,
-  inequality signs, digital numbers, and other symbols unique to puzzles.
-* Depending on the style, you can select whether to place the figure on the front side or the back side of the line.
-* When the BORDER input is turned ON, the character is placed on the side/vertex.
-
 ### 图标模式
+
+* 支持绘制多种图标，包括但不限于：
+  * 数字
+  * 箭头
+  * 基本图标
+  * 特殊图标
+* 当`线上编辑`开启时，图标将支持绘制在线或交叉点
+* 可以通过选择样式，将图标绘制在线之上或之下
+
+### 多格图标模式
 
 * 允许标记跨越多格的特殊图形标记（温度计、箭头、方块区域、多边形）
 * 删除图形标记：单击图形中您输入的第一个单元格
@@ -446,9 +449,9 @@
   * 数独
     * 标准数独 (cs)
     * 温度计数独 (ts)
-      * 图标模式 -> 温度计
+      * 多格图标模式 -> 温度计
     * 箭头数独 (as)
-      * 图标模式 -> 带尾箭
+      * 多格图标模式 -> 带尾箭
     * 奇偶数独 (eos)
       * [Panel: ON] Use Shape mode -> Shape/Circle submode (1st option in the dropdown) and Shape/Square submode (2nd
         option in the dropdown)
